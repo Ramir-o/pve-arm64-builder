@@ -1,0 +1,67 @@
+--- a/zh_CN.po
++++ b/zh_CN.po
+@@ -117,7 +117,7 @@
+ #: proxmox-yew-comp/src/node_info.rs:242
+ msgid "1 Socket"
+ msgid_plural "{n} Sockets"
+-msgstr[0] "{n}个套接字"
++msgstr[0] "{n}个插槽"
+ 
+ #: proxmox-backup/www/datastore/OptionView.js:335
+ msgid "1048576 (0 disables cache)"
+@@ -10013,7 +10013,7 @@
+ 
+ #: pve-manager/www/manager6/node/StatusView.js:137
+ msgid "Manager Version"
+-msgstr "Manager 版本"
++msgstr "管理器版本"
+ 
+ #: pve-manager/www/manager6/ceph/Services.js:29
+ #: proxmox-datacenter-manager/ui/src/ceph/cluster.rs:161
+@@ -12531,7 +12531,7 @@
+ 
+ #: proxmox-datacenter-manager/ui/src/pbs/mod.rs:175
+ msgid "Open Shell"
+-msgstr "打开 Shell"
++msgstr "打开控制台"
+ 
+ #: proxmox-datacenter-manager/ui/src/dashboard/filtered_tasks.rs:286
+ #: proxmox-yew-comp/src/running_tasks.rs:122
+@@ -16454,16 +16454,16 @@
+ #: proxmox-yew-comp/src/utils/task_descriptions.rs:183
+ #: proxmox-yew-comp/src/utils/task_descriptions.rs:190
+ msgid "Shell"
+-msgstr "Shell"
++msgstr "控制台"
+ 
+ #. TRANSLATORS: Spice is a proper name, see https://www.spice-space.org
+ #: proxmox-yew-comp/src/utils/task_descriptions.rs:90
+ msgid "Shell (Spice)"
+-msgstr "Shell (Spice)"
++msgstr "控制台 (Spice)"
+ 
+ #: proxmox-yew-comp/src/utils/task_descriptions.rs:91
+ msgid "Shell (VNC)"
+-msgstr "Shell（VNC）"
++msgstr "控制台（VNC）"
+ 
+ #: pmg-gui/js/SpamQuarantineOptions.js:15
+ msgid "Short"
+@@ -16845,7 +16845,7 @@
+ #: proxmox-widget-toolkit/src/Schema.js:97
+ #: proxmox-widget-toolkit/src/Utils.js:1161
+ msgid "Socket"
+-msgstr "套接字"
++msgstr "插槽"
+ 
+ #: proxmox-widget-toolkit/src/Utils.js:1161 pmg-gui/js/Subscription.js:138
+ #: pve-manager/www/manager6/node/Subscription.js:136
+@@ -16871,7 +16871,7 @@
+ #: proxmox-datacenter-manager/ui/src/administration/node_status.rs:366
+ #: proxmox-datacenter-manager/ui/src/administration/node_status.rs:370
+ msgid "Some"
+-msgstr ""
++msgstr "部分"
+ 
+ #: pve-manager/www/manager6/form/VMCPUFlagSelector.js:396
+ msgid ""
