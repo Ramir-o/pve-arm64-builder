@@ -893,6 +893,15 @@ relax_pve_manager_rados_dependency() {
     fi
 }
 
+append_unique_line() {
+    local file=$1
+    local line=$2
+
+    mkdir -p "$(dirname "${file}")"
+    touch "${file}"
+    grep -Fxq "${line}" "${file}" || printf '%s\n' "${line}" >> "${file}"
+}
+
 apply_source_fixes() {
     local source=$1
     local dir=$2
@@ -1021,6 +1030,12 @@ apply_source_fixes() {
             if [[ -f "${dir}/debian/dmsetup.install" ]]; then
                 perl -0pi -e 's#^usr/lib/udev/rules\.d/\*-dm\*\.rules$#usr/lib/udev/rules.d/10-dm.rules\nusr/lib/udev/rules.d/95-dm-notify.rules#m' "${dir}/debian/dmsetup.install"
             fi
+            append_unique_line "${dir}/debian/dmsetup.links" "usr/lib/udev/rules.d/10-dm.rules usr/lib/udev/rules.d/55-dm.rules"
+            append_unique_line "${dir}/debian/dmsetup.links" "usr/lib/udev/rules.d/69-dm-lvm.rules usr/lib/udev/rules.d/60-persistent-storage-dm.rules"
+            append_unique_line "${dir}/debian/lvm2.install" "usr/lib/udev/rules.d/11-dm-lvm.rules"
+            append_unique_line "${dir}/debian/lvm2.install" "usr/lib/udev/rules.d/69-dm-lvm.rules"
+            append_unique_line "${dir}/debian/lvm2.links" "usr/lib/udev/rules.d/11-dm-lvm.rules usr/lib/udev/rules.d/56-lvm.rules"
+            append_unique_line "${dir}/debian/lvm2.links" "usr/lib/udev/rules.d/69-dm-lvm.rules usr/lib/udev/rules.d/69-lvm.rules"
             if [[ -f "${dir}/debian/control" ]] && ! awk '
                 /^Package: lvm2$/ { in_lvm2 = 1; next }
                 /^Package:/ { in_lvm2 = 0 }
