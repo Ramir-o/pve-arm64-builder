@@ -280,9 +280,9 @@ prune_excluded_binary_artifacts() {
 source_ref() {
     case "$1" in
         qemu-server)
-            # Pin to the 9.1.16 changelog bump. The current master has
-            # unreleased dependency changes but still carries version 9.1.16.
-            printf '%s\n' 02ba5c110a0c82acbfbf58c91350a0eb24ded686
+            # Pin to the 9.1.17 changelog bump. The current master has
+            # unreleased dependency changes but still carries version 9.1.17.
+            printf '%s\n' 44370469c1be315670f31765eba0aef0c62feaa1
             ;;
     esac
 }
