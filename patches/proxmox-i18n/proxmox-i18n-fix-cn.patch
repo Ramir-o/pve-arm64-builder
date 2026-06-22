@@ -9,7 +9,7 @@
  
  #: proxmox-backup/www/datastore/OptionView.js:335
  msgid "1048576 (0 disables cache)"
-@@ -10013,7 +10013,7 @@
+@@ -10033,7 +10033,7 @@
  
  #: pve-manager/www/manager6/node/StatusView.js:137
  msgid "Manager Version"
@@ -18,7 +18,7 @@
  
  #: pve-manager/www/manager6/ceph/Services.js:29
  #: proxmox-datacenter-manager/ui/src/ceph/cluster.rs:161
-@@ -12531,7 +12531,7 @@
+@@ -12551,7 +12551,7 @@
  
  #: proxmox-datacenter-manager/ui/src/pbs/mod.rs:175
  msgid "Open Shell"
@@ -27,7 +27,7 @@
  
  #: proxmox-datacenter-manager/ui/src/dashboard/filtered_tasks.rs:286
  #: proxmox-yew-comp/src/running_tasks.rs:122
-@@ -16454,16 +16454,16 @@
+@@ -16474,16 +16474,16 @@
  #: proxmox-yew-comp/src/utils/task_descriptions.rs:183
  #: proxmox-yew-comp/src/utils/task_descriptions.rs:190
  msgid "Shell"
@@ -47,16 +47,16 @@
  
  #: pmg-gui/js/SpamQuarantineOptions.js:15
  msgid "Short"
-@@ -16845,7 +16845,7 @@
+@@ -16865,7 +16865,7 @@
  #: proxmox-widget-toolkit/src/Schema.js:97
- #: proxmox-widget-toolkit/src/Utils.js:1161
+ #: proxmox-widget-toolkit/src/Utils.js:1171
  msgid "Socket"
 -msgstr "套接字"
 +msgstr "插槽"
  
- #: proxmox-widget-toolkit/src/Utils.js:1161 pmg-gui/js/Subscription.js:138
+ #: proxmox-widget-toolkit/src/Utils.js:1171 pmg-gui/js/Subscription.js:138
  #: pve-manager/www/manager6/node/Subscription.js:136
-@@ -16871,7 +16871,7 @@
+@@ -16891,7 +16891,7 @@
  #: proxmox-datacenter-manager/ui/src/administration/node_status.rs:366
  #: proxmox-datacenter-manager/ui/src/administration/node_status.rs:370
  msgid "Some"
