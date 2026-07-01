@@ -170,7 +170,6 @@ prepare_apt() {
         "libusbredirparser-dev:${HOST_ARCH}" \
         "libxkbcommon-dev:${HOST_ARCH}" \
         "libpixman-1-dev:${HOST_ARCH}" \
-        "libasound2-dev:${HOST_ARCH}" \
         "libdrm-dev:${HOST_ARCH}" \
         "libpulse-dev:${HOST_ARCH}" \
         "libsndio-dev:${HOST_ARCH}" \
