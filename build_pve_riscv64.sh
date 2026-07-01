@@ -202,6 +202,7 @@ prepare_apt() {
         "libdrm-dev:${HOST_ARCH}" \
         "libpulse-dev:${HOST_ARCH}" \
         "libsndio-dev:${HOST_ARCH}" \
+		"libpng-dev:${HOST_ARCH}" \
         "libyang-dev:${HOST_ARCH}"
 
     if [[ ! -x "${HOME}/.cargo/bin/rustup" ]]; then
