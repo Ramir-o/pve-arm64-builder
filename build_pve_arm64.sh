@@ -1169,6 +1169,10 @@ apply_source_fixes() {
             fi
             if [[ -f "${dir}/debian/rules" ]]; then
                 sed -i 's/--enable-rbd/--disable-rbd/' "${dir}/debian/rules"
+				sed -i 's/--enable-pa/--disable-pa/' "${dir}/debian/rules"
+				sed -i 's/--enable-sndio/--disable-sndio/' "${dir}/debian/rules"
+				sed -i 's/--enable-spice/--disable-spice/' "${dir}/debian/rules
+				sed -i 's/--enable-xkbcommon/--disable-xkbcommon/' "${dir}/debian/rules"
                 if ! grep -q -- '--cross-prefix="$(DEB_HOST_GNU_TYPE)-"' "${dir}/debian/rules"; then
                     sed -i '/--disable-download \\/a\
 		    --cross-prefix="$(DEB_HOST_GNU_TYPE)-" \
