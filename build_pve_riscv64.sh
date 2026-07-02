@@ -23,7 +23,7 @@ else
 fi
 
 log() {
-    printf '[%s] %s\n' "$(date '+%Y-%m-%dT%H:%M:%SZ')" "$*"
+    printf '[%s] %s\n' "$(date '+%Y-%m-%dT%H:%M:%S')" "$*"
 }
 
 run_root() {
