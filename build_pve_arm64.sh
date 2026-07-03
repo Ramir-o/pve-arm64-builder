@@ -261,6 +261,7 @@ source_ref() {
             # printf '%s\n' 9b732b93ec088bd30babeba2a85a4a3f1cc50927
             # ;;
     # esac
+	: # 占位符
 }
 
 repo_url() {
