@@ -1,0 +1,37 @@
+name: Schedule Build PVE Packages
+
+on:
+  schedule:
+    # 每周三、周日 UTC 01:00
+    - cron: "0 1 * * 0,3"
+
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  actions: write
+
+jobs:
+  trigger:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Trigger Build-PVE-Packages
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          release_tag=$(date +'%Y-%m-%d')
+
+          for arch in arm64 riscv64; do
+            echo "Trigger ${arch}..."
+
+            gh workflow run Build-PVE-Packages.yml \
+              --repo "${{ github.repository }}" \
+              -f build_branch="${arch}" \
+              -f only_sources= \
+              -f max_passes=4 \
+              -f resume_built=1 \
+              -f upload_release=yes \
+              -f release_tag="${release_tag}" \
+              -f runner_label=ubuntu-26.04
+          done
