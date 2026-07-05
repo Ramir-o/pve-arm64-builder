@@ -2,8 +2,8 @@ name: Schedule Build PVE Packages
 
 on:
   schedule:
-    # 每周三、周日 UTC 01:00
-    - cron: "0 1 * * 0,3"
+    # 每周三、周日 UTC 02:22
+    - cron: "22 2 * * 0,3"
 
   workflow_dispatch:
 
