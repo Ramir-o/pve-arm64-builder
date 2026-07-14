@@ -232,7 +232,7 @@ jobs:
           allow_updates: true
           remove_artifacts: false
           replaces_artifacts: true
-          make_latest: false
+          make_latest: true
           gh_token: ${{ secrets.GITHUB_TOKEN }}
           body: |
             ### PVE Packages Build
@@ -244,8 +244,9 @@ jobs:
       - name: Delete releases and workflows runs
         uses: ophub/delete-releases-workflows@main
         with:
-          delete_releases: false
-          releases_keep_latest: 10
+          delete_releases: true
+          releases_keep_latest: 3
+          releases_keep_keyword: "PVE-Packages"
           delete_workflows: true
           workflows_keep_day: 3
           gh_token: ${{ secrets.GITHUB_TOKEN }}
